@@ -1,9 +1,13 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
+import React from "react";
 
 const AuthContext = createContext();
 function AuthProvider(props) {
-  const [userInfo, setUserInfo] = useState()
-  return <AuthContext.Provider {...props}></AuthContext.Provider>;
+  const [userInfo, setUserInfo] = useState({});
+  const values = { userInfo, setUserInfo };
+  return (
+    <AuthContext.Provider value={values} {...props}></AuthContext.Provider>
+  );
 }
 
 function useAuth() {
