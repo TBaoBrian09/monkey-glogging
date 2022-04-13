@@ -2,6 +2,7 @@ import { createContext, useContext } from "react";
 
 const AuthContext = createContext();
 function AuthProvider(props) {
+  const [userInfo, setUserInfo] = useState()
   return <AuthContext.Provider {...props}></AuthContext.Provider>;
 }
 
