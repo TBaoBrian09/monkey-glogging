@@ -5,11 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
-import { theme } from "./utils/cons";
+import { theme } from "./utils/constants";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
 
-const container = document.getElementById("app");
+const container = document.getElementById("root");
 const root = createRoot(container);
 
 root.render(
