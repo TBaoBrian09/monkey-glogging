@@ -3,7 +3,7 @@ import { Label } from "components/label";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
-import { values } from "lodash";
+// import { values } from "lodash";
 import { IconEyeCLose, IconEyeOpen } from "components/icon";
 import Field from "components/field/Field";
 import { Button } from "components/button";
@@ -83,7 +83,13 @@ const SignUpPage = () => {
               )}
             </Input>
           </Field>
-          <Button type="submit" disabled={true} isLoading={true}>
+          <Button
+            type="submit"
+            style={{
+              maxWidth: 300,
+              margin: "0 auto",
+            }}
+          >
             Sign Up
           </Button>
         </form>

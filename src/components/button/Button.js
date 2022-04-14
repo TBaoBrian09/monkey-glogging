@@ -13,7 +13,7 @@ const ButtonStyles = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: ${(props) => props.height || "70px"};
+  height: ${(props) => props.height || "66px"};
   background-image: linear-gradient(
     to right bottom,
     ${(props) => props.theme.primary},
