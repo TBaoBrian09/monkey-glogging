@@ -10,7 +10,6 @@ function App() {
         <Routes>
           <Route path="/sign-up" element={<SignUpPage />} />
         </Routes>
-        ;
       </AuthProvider>
     </div>
   );
