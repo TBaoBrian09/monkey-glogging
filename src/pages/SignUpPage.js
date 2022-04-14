@@ -35,9 +35,16 @@ const SignUpPage = () => {
     handleSubmit,
     formState: { errors, isValid, isSubmitting },
     watch,
-  } = useForm();
+  } = useForm({
+    mode: "onChange",
+  });
   const handleSignUp = (values) => {
-    console.log(values);
+    if (!isValid) return;
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, 5000);
+    });
   };
   const [togglePassword, setTogglePassword] = useState(false);
   return (
@@ -65,7 +72,7 @@ const SignUpPage = () => {
             />
           </Field>
           <Field>
-            <Label htmlFor="fullname">password address</Label>
+            <Label htmlFor="fullname">Password address</Label>
             <Input
               type={togglePassword ? "text" : "password"}
               name="password"
@@ -89,6 +96,8 @@ const SignUpPage = () => {
               maxWidth: 300,
               margin: "0 auto",
             }}
+            isloading={isSubmitting}
+            disabled={isSubmitting}
           >
             Sign Up
           </Button>
