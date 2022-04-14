@@ -7,6 +7,7 @@ import { values } from "lodash";
 import { IconEyeCLose, IconEyeOpen } from "components/icon";
 import Field from "components/field/Field";
 import { Button } from "components/button";
+import { LoadingSpinner } from "components/loading";
 
 const SignUpPageStyles = styled.div`
   min-height: 100vh;
@@ -82,7 +83,7 @@ const SignUpPage = () => {
               )}
             </Input>
           </Field>
-          <Button type="submit" disabled>
+          <Button type="submit" disabled={true} isLoading={true}>
             Sign Up
           </Button>
         </form>
