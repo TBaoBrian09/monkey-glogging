@@ -35,6 +35,7 @@ const SignUpPage = () => {
     handleSubmit,
     formState: { errors, isValid, isSubmitting },
     watch,
+    reset,
   } = useForm({
     mode: "onChange",
   });
